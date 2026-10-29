@@ -1,0 +1,13 @@
+/* Shared responsive dialogs, including dynamically created order editors. */
+*{box-sizing:border-box}
+.modal{position:fixed!important;inset:auto 0!important;top:var(--dialog-top,0px)!important;height:var(--dialog-height,100vh)!important;height:var(--dialog-height,100dvh)!important;overflow:hidden!important;padding:12px;padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(12px,env(safe-area-inset-bottom));overscroll-behavior:contain}
+.modal .panel{display:flex;flex-direction:column;max-width:600px;width:100%;height:auto;max-height:100%;min-height:0;margin:0 auto!important;padding:0!important;border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 6px 30px #0003}
+.dialog-content{min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:18px;scroll-padding:20px;flex:1 1 auto}
+.dialog-content h2{margin:0 0 16px;font-size:25px}
+.dialog-content input,.dialog-content select,.dialog-content textarea{width:100%;min-width:0;max-width:100%;font-size:18px!important;padding:11px;margin:6px 0 14px;border:1px solid #aaa;border-radius:8px}
+.dialog-content label{display:block;overflow-wrap:anywhere}
+.dialog-content p{overflow-wrap:anywhere}
+.dialog-actions{display:flex;flex-wrap:wrap;gap:10px;flex:0 0 auto;padding:12px 16px;background:#fff;border-top:1px solid #ddd}
+.dialog-actions button{flex:1 1 120px;min-height:48px;max-width:100%;margin:0!important;padding:10px 12px!important;font-size:18px!important;border-radius:8px;white-space:normal}
+.success{box-sizing:border-box;padding-bottom:max(24px,env(safe-area-inset-bottom));overflow-wrap:anywhere}
+@media(max-width:360px){.modal{padding:8px}.dialog-content{padding:12px}.dialog-actions{padding:10px}.dialog-content h2{font-size:23px}}
